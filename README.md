@@ -41,7 +41,7 @@ You must run this script with options. They are outlined below:
 Credits
 =======
 
- + Primary work by maxexcloo
+ + Primary work by maxexcloo https://github.com/maxexcloo/Minimal.git
  + cedr @ daIRC: General Help
  + DPKG Cleaning: http://www.coredump.gr/linux/debian-package-list-backup-and-restore/
  + miTgiB @ daIRC: Script Help
