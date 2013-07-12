@@ -65,7 +65,7 @@ logrotate                                       install
 lsb-base                                        install
 mawk                                            install
 mount                                           install
-nano                                            install
+vim-tiny                                        install
 ncurses-base                                    install
 ncurses-bin                                     install
 net-tools                                       install

@@ -12,5 +12,5 @@ libfreetype6                                    install
 libklibc                                        install
 libuuid-perl                                    install
 linux-base                                      install
-module-init-tools                               install
+kmod                                            install
 ucf                                             install
