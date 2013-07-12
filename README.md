@@ -26,7 +26,7 @@ Download
 
 Download the script with the following command:
 
-	cd ~; wget --no-check-certificate -O minimal.tar.gz http://www.github.com/WayneBuckhanan/deb7min/tarball/master; tar zxvf deb7min.tar.gz; cd *deb7min*
+	cd ~; wget --no-check-certificate -O deb7min.tar.gz http://www.github.com/WayneBuckhanan/deb7min/tarball/master; tar zxvf deb7min.tar.gz; cd *deb7min*
 
 Instructions
 ============
