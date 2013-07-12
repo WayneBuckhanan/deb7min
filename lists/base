@@ -10,7 +10,6 @@ coreutils                                       install
 cron                                            install
 dash                                            install
 debconf                                         install
-debconf-english                                 install
 debian-archive-keyring                          install
 debianutils                                     install
 diffutils                                       install
