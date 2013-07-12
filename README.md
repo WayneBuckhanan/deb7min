@@ -9,8 +9,8 @@ Compatibility
 
 **Operating Systems:**
 
- + Debian 6 (Squeeze) i686
- + Debian 6 (Squeeze) x86_64
+ + Debian 7 (Wheezy) i686
+ + Debian 7 (Wheezy) x86_64
 
 **Platforms:**
 
@@ -26,7 +26,7 @@ Download
 
 Download the script with the following command:
 
-	cd ~; wget --no-check-certificate -O minimal.tar.gz http://www.github.com/maxexcloo/Minimal/tarball/master; tar zxvf minimal.tar.gz; cd *Minimal*
+	cd ~; wget --no-check-certificate -O minimal.tar.gz http://www.github.com/WayneBuckhanan/deb7min/tarball/master; tar zxvf deb7min.tar.gz; cd *deb7min*
 
 Instructions
 ============
@@ -41,6 +41,7 @@ You must run this script with options. They are outlined below:
 Credits
 =======
 
+ + Primary work by maxexcloo
  + cedr @ daIRC: General Help
  + DPKG Cleaning: http://www.coredump.gr/linux/debian-package-list-backup-and-restore/
  + miTgiB @ daIRC: Script Help
