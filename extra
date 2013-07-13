@@ -5,6 +5,7 @@ rsnapshot
 rsync
 screen
 unzip
-vim-tiny
 sudo
 bash-completion
+vim
+less
