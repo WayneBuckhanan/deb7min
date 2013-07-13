@@ -7,5 +7,5 @@ screen
 unzip
 sudo
 bash-completion
-vim
 less
+vim
