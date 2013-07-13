@@ -310,6 +310,20 @@ function packages_update {
 	apt-get update
 }
 
+# Remind me about next steps...
+function post_inst_notes {
+	echo Cool.
+	echo Double check, are you done with this script?
+	echo   (configure, ssh/dropbear, extra)
+	echo Remember, 
+	echo   no ssh or dropbear means no way back in!
+	echo   no extras means no sudo (use 'su -' to bootstrap)
+	echo Next steps:
+	echo   adduser <name> [--ingroup www-user]
+	echo   adduser <name> sudo
+	echo Good luck and God speed!
+}
+
 #################
 ## Init Script ##
 #################
@@ -319,19 +333,23 @@ case "$1" in
 	dropbear)
 		install_basic
 		install_dropbear
+		post_inst_notes
 	;;
 	# Install Extra Packages
 	extra)
 		install_extra
+		post_inst_notes
 	;;
 	# Configure Install
 	configure)
 		configure_basic
+		post_inst_notes
 	;;
 	# Minimise System & Install OpenSSH
 	ssh)
 		install_basic
 		install_ssh
+		post_inst_notes
 	;;
 	# Show Help
 	*)
