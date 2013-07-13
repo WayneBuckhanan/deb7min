@@ -1,0 +1,5 @@
+20130713 sort out dependencies
+	# wget: libgcrypt11 libgnutls26 libgpg-error0 libtasn1-3
+	# vim-tiny: /etc/vim/vimrc.tiny remnant after remove/install
+
+###
