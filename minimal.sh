@@ -100,7 +100,7 @@ function configure_defaults {
 function configure_final {
 	echo \>\> Configuring: Finalizing
 	# Remove All Home Files
-	rm -rf ~/*
+	#rm -rf ~/*
 }
 
 # Clean Getty
@@ -312,16 +312,26 @@ function packages_update {
 
 # Remind me about next steps...
 function post_inst_notes {
-	echo Cool.
-	echo Double check, are you done with this script?
-	echo   (configure, ssh/dropbear, extra)
-	echo Remember, 
-	echo   no ssh or dropbear means no way back in!
-	echo   no extras means no sudo (use 'su -' to bootstrap)
-	echo Next steps:
-	echo   adduser <name> [--ingroup www-user]
-	echo   adduser <name> sudo
-	echo Good luck and God speed!
+	echo "
+######
+###
+### Great.
+###
+### Time to double check, are you done with this script?
+###	bash $0 {ssh|dropbear|extra|configure}
+###
+### Remember, 
+###   no ssh or dropbear means no way back in to a VPS!
+###   no extras means no sudo (use 'su -' to bootstrap)
+###
+### Possible next step/s (if you want a unique user/group setup):
+###   adduser <name> [--ingroup www-user]
+###   adduser <name> sudo
+###
+### Good luck and God speed!
+###
+######"
+
 }
 
 #################
