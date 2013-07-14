@@ -2,4 +2,9 @@
 	# wget: libgcrypt11 libgnutls26 libgpg-error0 libtasn1-3
 	# vim-tiny: /etc/vim/vimrc.tiny remnant after remove/install
 
+20130714 store and restore ssh_host keys
+	# tar -cPf ssh-keys.tar /etc/ssh/ssh_host_*
+	# install_ssh
+	# tar -xPf ssh-keys.tar
+	# rm ssh-keys.tar
 ###

@@ -321,18 +321,34 @@ function post_inst_notes {
 ###	bash $0 {ssh|dropbear|extra|configure}
 ###
 ### Remember, 
-###   no ssh or dropbear means no way back in to a VPS!
-###   no extras means no sudo (use 'su -' to bootstrap)
+###   no ssh or dropbear means no way back into a VPS!
+###   no 'extra's means no sudo (use 'su -' to bootstrap)
+###   your server's sshd RSA key probably just changed 
+###   test your user account before you disable root login!
 ###
-### Possible next step/s (if you want a unique user/group setup):
-###   adduser <name> [--ingroup www-user]
-###   adduser <name> sudo
+### Possible next step/s
+###     remove the old entry in your local ~/.ssh/known_hosts
+###     adduser <name> sudo
+###   (if you want a unique user/group setup):
+###     adduser <name> --ingroup www-user
 ###
 ### Good luck and God speed!
 ###
 ######"
 
 }
+
+# Store existing ssh_host keys
+function tar_keys {
+	tar -cPf ssh-keys.tar /etc/ssh/ssh_host_*
+}
+
+# Restore previous ssh_host keys
+function untar_keys {
+	tar -xPf ssh-keys.tar
+	rm ssh-keys.tar
+}
+
 
 #################
 ## Init Script ##
@@ -361,11 +377,20 @@ case "$1" in
 		install_ssh
 		post_inst_notes
 	;;
+	# Minimise System & Install OpenSSH with old ssh_host keys
+	keepssh)
+		tar_keys
+		install_basic
+		install_ssh
+		untar_keys
+		post_inst_notes
+	;;
 	# Show Help
 	*)
 		echo \>\> You must run this script with options. They are outlined below:
 		echo For a minimal Dropbear based install: bash minimal.sh dropbear
 		echo For a minimal OpenSSH based install: bash minimal.sh ssh
+		echo For a minimal OpenSSH based install with existing ssh_host keys: bash minimal.sh keepssh
 		echo To install extra packages defined in the extra file: bash minimal.sh extra
 		echo To set the clock, clean files and create a user: bash minimal.sh configure
 	;;
