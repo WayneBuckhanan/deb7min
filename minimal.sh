@@ -318,7 +318,7 @@ function post_inst_notes {
 ### Great.
 ###
 ### Time to double check, are you done with this script?
-###	bash $0 {ssh|dropbear|extra|configure}
+###	bash $0 {ssh|dropbear|keepssh|extra|configure}
 ###
 ### Remember, 
 ###   no ssh or dropbear means no way back into a VPS!
@@ -330,7 +330,7 @@ function post_inst_notes {
 ###     remove the old entry in your local ~/.ssh/known_hosts
 ###     adduser <name> sudo
 ###   (if you want a unique user/group setup):
-###     adduser <name> --ingroup www-user
+###     adduser <name> --ingroup www-data; adduser <name> sudo
 ###
 ### Good luck and God speed!
 ###
