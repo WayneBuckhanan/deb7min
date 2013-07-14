@@ -244,7 +244,7 @@ function packages_clean {
 	# Set Package Selections
 	dpkg --set-selections < /tmp/dpkg
 	# Update DPKG
-	apt-get dselect-upgrade
+	apt-get -y dselect-upgrade
 	# Upgrade Any Outdated Packages
 	apt-get -y upgrade
 }
