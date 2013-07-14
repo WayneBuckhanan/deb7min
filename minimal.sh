@@ -192,7 +192,7 @@ function install_basic {
 function install_dropbear {
 	echo \>\> Configuring Dropbear
 	# Install Dropbear
-	apt-get install dropbear
+	apt-get -y install dropbear
 	# Update Configuration Files
 	cp settings/dropbear /etc/default/dropbear
 	# Install OpenSSH For SFTP Support
@@ -218,7 +218,7 @@ function install_extra {
 function install_ssh {
 	echo \>\> Configuring SSH
 	# Install OpenSSH
-	apt-get install openssh-server
+	apt-get -y install openssh-server
 	# Copy SSH Configuration Files
 	cp settings/sshd /etc/ssh/sshd_config
 	cp settings/ssh /etc/ssh/ssh_config
@@ -246,7 +246,7 @@ function packages_clean {
 	# Update DPKG
 	apt-get dselect-upgrade
 	# Upgrade Any Outdated Packages
-	apt-get upgrade
+	apt-get -y upgrade
 }
 
 # Create Package List
@@ -307,7 +307,7 @@ function packages_update {
 	# Add DotDeb Source Key
 	wget http://www.dotdeb.org/dotdeb.gpg -qO - | apt-key add -
 	# Update Package Lists
-	apt-get update
+	apt-get -y update
 }
 
 # Remind me about next steps...
