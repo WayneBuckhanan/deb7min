@@ -8,4 +8,5 @@ unzip
 sudo
 bash-completion
 less
+fail2ban
 vim
