@@ -46,9 +46,9 @@ libncurses5                                     install
 libncursesw5                                    install
 libnewt0.52                                     install
 libnfnetlink0                                   install
-libpam0g                                        install
 libpam-modules                                  install
 libpam-runtime                                  install
+libpam0g                                        install
 libpopt0                                        install
 libreadline6                                    install
 libselinux1                                     install
@@ -78,13 +78,14 @@ readline-common                                 install
 sed                                             install
 sensible-utils                                  install
 sysv-rc                                         install
+#sysvinit                                        install
 sysvinit-utils                                  install
 tar                                             install
 traceroute                                      install
 tzdata                                          install
 udev                                            install
-util-linux                                      install
 upstart                                         install
+util-linux                                      install
 wget                                            install
 whiptail                                        install
 xz-utils                                        install
